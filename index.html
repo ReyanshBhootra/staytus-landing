@@ -405,7 +405,7 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
         </svg>
       </div>
       <h3 class="mt2">You're almost in.</h3>
-      <p class="ms2">Drop your email. First <span class="ma">100 students get 6 months free</span>. After that? Worth every penny.</p>
+      <p class="ms2">Drop your email. First <span class="ma">100 students get 3 months free</span>. After that? Worth every penny.</p>
       <input type="email" class="minp" placeholder="your@email.com" id="einp">
       <button class="msubmit" onclick="handleSub()">Secure My Spot →</button>
       <p class="mn">No spam. Unsubscribe anytime. We're students too.</p>
@@ -537,7 +537,7 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
     <div class="psep"></div>
     <div class="pi"><div class="pn" style="color:var(--teal)">Zero</div><div class="pl">Good tools. Until now.</div></div>
     <div class="psep"></div>
-    <div class="pi"><div class="pn">6mo</div><div class="pl">Free for first 100</div></div>
+    <div class="pi"><div class="pn">3mo</div><div class="pl">Free for first 100</div></div>
 </div>
 
 <div class="tsec">
@@ -600,7 +600,7 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
   <div class="cta-grad"></div>
   <div class="ctai">
     <h2 class="ctah2">Your <span>future</span><br>starts here.</h2>
-    <p class="ctasub">Built by <strong>international students</strong> who were tired of figuring this out alone. First 100 get 6 months free. No credit card. No BS.</p>
+    <p class="ctasub">Built by <strong>international students</strong> who were tired of figuring this out alone. First 100 get 3 months free. No credit card. No BS.</p>
     <a href="#hero-section" class="ctabtn" id="ctaBtn">✉&nbsp;&nbsp;Open Your Invitation</a>
   </div>
 </section>
@@ -832,9 +832,15 @@ document.getElementById('footerWaitlist').addEventListener('click',scrollAndOpen
 function handleSub(){
   const v=document.getElementById('einp').value.trim();
   if(!v||!v.includes('@')){gsap.to('.minp',{keyframes:{x:[-10,10,-8,8,-4,4,0]},duration:.4});return}
+
+  fetch('/.netlify/functions/subscribe',{
+    method:'POST',
+    headers:{'content-type':'application/json'},
+    body:JSON.stringify({email:v})
+  }).catch(()=>{});
+
   document.getElementById('fstate').style.display='none';
   document.getElementById('sstate').style.display='flex';
-
   boom();
   setTimeout(closeModal,3400);
 }
