@@ -335,7 +335,8 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
 .cp{position:fixed;pointer-events:none;z-index:600;opacity:0}
 
 @media(max-width:900px){
-  nav{padding:1rem 1.5rem}
+  nav{padding:.5rem 1.5rem}
+  .nav-logo img{height:52px}
   .side-panel{display:none}
   .wsec{padding:5rem 1.5rem}
   .wgrid{grid-template-columns:1fr}
@@ -651,8 +652,8 @@ gsap.registerPlugin(ScrollTrigger);
 // CURSOR
 const dot=document.getElementById('dot'),ring=document.getElementById('ring');
 let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;gsap.to(dot,{x:mx,y:my,duration:.04,ease:'none'})});
-(function rf(){rx+=(mx-rx)*.25;ry+=(my-ry)*.25;gsap.set(ring,{x:rx,y:ry});requestAnimationFrame(rf)})();
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;gsap.to(dot,{x:mx,y:my,duration:.02,ease:'none'})});
+(function rf(){rx+=(mx-rx)*.35;ry+=(my-ry)*.35;gsap.set(ring,{x:rx,y:ry});requestAnimationFrame(rf)})();
 document.querySelectorAll('button,a,input').forEach(el=>{
   el.addEventListener('mouseenter',()=>document.body.classList.add('h'));
   el.addEventListener('mouseleave',()=>document.body.classList.remove('h'));
