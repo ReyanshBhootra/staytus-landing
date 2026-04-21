@@ -1,0 +1,10 @@
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: *
+Allow: /
+
+Sitemap: https://staytus.site/sitemap.xml
