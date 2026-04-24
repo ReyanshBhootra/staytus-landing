@@ -79,7 +79,6 @@ nav.sc{background:rgba(8,14,29,.95);backdrop-filter:blur(24px);border-color:var(
 .flag{position:absolute;font-size:1.35rem;animation:cs 75s linear infinite;opacity:.55;filter:drop-shadow(0 0 6px rgba(255,255,255,.08))}
 @keyframes cs{from{transform:rotate(0)}to{transform:rotate(-360deg)}}
 
-/* SIDE PANELS - terminal card style with glow */
 .side-panel{
   position:absolute;top:50%;transform:translateY(-50%);
   z-index:4;width:220px;
@@ -99,7 +98,6 @@ nav.sc{background:rgba(8,14,29,.95);backdrop-filter:blur(24px);border-color:var(
 .side-panel.left{left:1.5rem;text-align:left}
 .side-panel.right{right:1.5rem;text-align:right}
 
-/* Terminal header dots */
 .panel-dots{display:flex;gap:.35rem;margin-bottom:.8rem}
 .side-panel.right .panel-dots{justify-content:flex-end}
 .pdot{width:7px;height:7px;border-radius:50%}
@@ -107,7 +105,6 @@ nav.sc{background:rgba(8,14,29,.95);backdrop-filter:blur(24px);border-color:var(
 .pdot.y{background:#fbbf24;opacity:.7}
 .pdot.g{background:#2dd4bf;opacity:.7}
 
-/* Typewriter lines */
 .tw-line{
   font-size:1rem;font-weight:400;
   color:#94a3b8;line-height:1.65;
@@ -120,7 +117,6 @@ nav.sc{background:rgba(8,14,29,.95);backdrop-filter:blur(24px);border-color:var(
 .tw-line.white{color:var(--white);font-weight:600}
 .tw-line.purple{color:var(--purple)}
 
-/* Vertical rotated label */
 .panel-tag{
   font-size:.85rem;font-weight:700;letter-spacing:.2em;
   text-transform:uppercase;color:rgba(45,212,191,.4);
@@ -130,7 +126,6 @@ nav.sc{background:rgba(8,14,29,.95);backdrop-filter:blur(24px);border-color:var(
 .side-panel.left .panel-tag{right:-1.2rem;transform:translateY(-50%)}
 .side-panel.right .panel-tag{left:-1.2rem;transform:translateY(-50%) rotate(180deg)}
 
-/* Stagger fade separator */
 .panel-sep{
   height:1px;background:rgba(45,212,191,.12);
   margin:.6rem 0;opacity:0;transition:opacity .4s;
@@ -204,7 +199,6 @@ nav.sc{background:rgba(8,14,29,.95);backdrop-filter:blur(24px);border-color:var(
 }
 .env-label{font-size:1.05rem;font-weight:700;color:var(--teal);letter-spacing:.03em;font-family:'Outfit',sans-serif;text-align:center}
 
-/* AI line under envelope */
 .sub-ai{
   display:inline-flex;align-items:center;gap:.45rem;
   font-size:.85rem;font-weight:500;color:rgba(129,140,248,.8);
@@ -404,8 +398,8 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
           <defs><linearGradient id="mg" x1="2" y1="7" x2="24" y2="19" gradientUnits="userSpaceOnUse"><stop stop-color="#2dd4bf"/><stop offset="1" stop-color="#818cf8"/></linearGradient></defs>
         </svg>
       </div>
-      <h3 class="mt2">You're almost in.</h3>
-      <p class="ms2">Drop your email. First <span class="ma">100 students get 3 months free</span>. After that? Worth every penny.</p>
+      <h3 class="mt2">Be first in the door.</h3>
+      <p class="ms2">Drop your email. <span class="ma">Waitlist members get access before anyone else</span> — and shape what we build.</p>
       <input type="email" class="minp" placeholder="your@email.com" id="einp">
       <button class="msubmit" onclick="handleSub()">Secure My Spot →</button>
       <p class="mn">No spam. Unsubscribe anytime. We're students too.</p>
@@ -413,7 +407,7 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
     <div class="msuccess" id="sstate">
       <div class="sico">🎉</div>
       <h3 class="stit">You're on the list.</h3>
-      <p class="ssub2">We'll hit you up when Staytus launches.<br>Tell one friend who needs this.</p>
+      <p class="ssub2">We'll reach out when Staytus launches.<br>Tell one friend who needs this.</p>
     </div>
   </div>
 </div>
@@ -423,7 +417,7 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
     <img src="logo.png" alt="Staytus" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
     <span style="display:none;align-items:center;gap:.5rem;font-family:'Outfit',sans-serif;font-weight:800;font-size:1.3rem;color:white">Staytus</span>
   </a>
-  <div class="nav-badge"><span class="bdot"></span>Early Access Open</div>
+  <div class="nav-badge"><span class="bdot"></span>Waitlist Open</div>
 </nav>
 
 <section class="hero" id="hero-section">
@@ -441,7 +435,6 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
     <span class="flag" style="top:8%;left:3%">🇸🇦</span>
   </div>
 
-  <!-- LEFT PANEL: terminal card + typewriter + stagger -->
   <div class="side-panel left" id="hs">
     <div class="panel-dots">
       <div class="pdot r"></div>
@@ -459,7 +452,6 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
     <div class="panel-tag">STATUS</div>
   </div>
 
-  <!-- RIGHT PANEL: terminal card + typewriter right-aligned -->
   <div class="side-panel right" id="hs2">
     <div class="panel-dots" style="justify-content:flex-end">
       <div class="pdot g"></div>
@@ -490,7 +482,7 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
     </h1>
 
     <div class="env-zone" id="ez">
-      <p class="env-prompt"><span class="arr">↓</span>&nbsp;tap to join the waitlist</p>
+      <p class="env-prompt"><span class="arr">↓</span>&nbsp;join the waitlist</p>
       <div style="position:relative;display:inline-block">
         <button class="env-btn" id="envBtn" onclick="openModal()">
           <div class="env-glow"></div>
@@ -521,7 +513,6 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
         </div>
         <div id="openMeBubble" class="open-me-bubble" style="top:18.5px;right:10px">OPEN ME!</div>
       </div>
-      <!-- AI line stays under envelope -->
       <span class="sub-ai">
         <span class="ai-dot"></span>AI-powered
         <span class="ai-dot"></span>Always up to date
@@ -537,7 +528,7 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
     <div class="psep"></div>
     <div class="pi"><div class="pn" style="color:var(--teal)">Zero</div><div class="pl">Good tools. Until now.</div></div>
     <div class="psep"></div>
-    <div class="pi"><div class="pn">3mo</div><div class="pl">Free for first 100</div></div>
+    <div class="pi"><div class="pn">32+</div><div class="pl">Students already on the waitlist</div></div>
 </div>
 
 <div class="tsec">
@@ -553,7 +544,7 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
       <div class="titem"><div class="qcard"><p class="qt">"I already pay for Claude just to track my OPT deadlines."</p><p class="qs">MBA Student · NJIT</p></div></div>
       <div class="titem"><div class="qcard"><p class="qt">"I learned about OPT from my seniors. Without them, I would have been completely lost."</p><p class="qs">Master's Student · CS</p></div></div>
       <div class="titem"><div class="qcard"><p class="qt">"One portal would be easier than reading 20 different news articles every day."</p><p class="qs">NYC Immigration Attorney</p></div></div>
-      <div class="titem"><div class="qcard"><p class="qt">"I missed a critical deadline because nobody told me during orientation."</p><p class="qs">Graduate Student · NJIT</p></div></div>
+      <div class="titem"><div class="qcard"><p class="qt">"I missed a critical deadline because nobody tells you."</p><p class="qs">Graduate Student · NJIT</p></div></div>
     </div>
   </div>
 </div>
@@ -585,10 +576,10 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
           <div class="ai-badge">✦ AI-Powered Navigation</div>
         </div>
         <div class="cwr">
-          <div class="mstat"><span class="mlab"><span class="mdot" style="background:var(--teal)"></span>OPT Dashboard</span><span class="mval">Deadlines & alerts</span></div>
-          <div class="mstat"><span class="mlab"><span class="mdot" style="background:var(--purple)"></span>AI Navigator</span><span class="mval">Plain English answers</span></div>
-          <div class="mstat"><span class="mlab"><span class="mdot" style="background:var(--coral)"></span>Job Board</span><span class="mval">Verified employers</span></div>
-          <div class="mstat"><span class="mlab"><span class="mdot" style="background:var(--pink)"></span>Options Map</span><span class="mval">Beyond the obvious</span></div>
+          <div class="mstat"><span class="mlab"><span class="mdot" style="background:var(--teal)"></span>AI Advisor</span><span class="mval">Your next move, always</span></div>
+          <div class="mstat"><span class="mlab"><span class="mdot" style="background:var(--purple)"></span>Document Vault</span><span class="mval">Organized & encrypted</span></div>
+          <div class="mstat"><span class="mlab"><span class="mdot" style="background:var(--coral)"></span>Job Intelligence</span><span class="mval">Verified employers</span></div>
+          <div class="mstat"><span class="mlab"><span class="mdot" style="background:var(--pink)"></span>Pathway Simulator</span><span class="mval">OPT → H-1B → Green Card</span></div>
         </div>
       </div>
     </div>
@@ -600,8 +591,8 @@ footer{border-top:1px solid var(--border);padding:3.5rem 4rem;position:relative;
   <div class="cta-grad"></div>
   <div class="ctai">
     <h2 class="ctah2">Your <span>future</span><br>starts here.</h2>
-    <p class="ctasub">Built by <strong>international students</strong> who were tired of figuring this out alone. First 100 get 3 months free. No credit card. No BS.</p>
-    <a href="#hero-section" class="ctabtn" id="ctaBtn">✉&nbsp;&nbsp;Open Your Invitation</a>
+    <p class="ctasub">Built by <strong>international students</strong> who were tired of figuring this out alone. Join the waitlist and be first in when we launch.</p>
+    <a href="#hero-section" class="ctabtn" id="ctaBtn">✉&nbsp;&nbsp;Join the Waitlist</a>
   </div>
 </section>
 
@@ -656,8 +647,6 @@ document.addEventListener('click',e=>{
   setTimeout(()=>r.remove(),600);
 });
 
-
-// CODE CANVAS
 const canvas=document.getElementById('cc');
 const ctx=canvas.getContext('2d');
 let W,H;
@@ -683,10 +672,8 @@ function drawCode(){
 }
 drawCode();
 
-// NAV
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',window.scrollY>50));
 
-// HERO ENTRANCE
 gsap.set(['#he','#hh','#ez'],{opacity:0,y:32});
 gsap.set('#ps',{opacity:0,y:32});
 const tl=gsap.timeline({delay:.2});
@@ -694,7 +681,6 @@ tl.to('#he',{opacity:1,y:0,duration:.8,ease:'power3.out'})
   .to('#hh',{opacity:1,y:0,duration:1.1,ease:'power4.out'},'-=.5')
   .to('#ez',{opacity:1,y:0,duration:.85,ease:'power3.out'},'-=.5')
 
-// TYPEWRITER FUNCTION
 function typewrite(el, delay, speed=38){
   return new Promise(resolve=>{
     const text = el.textContent;
@@ -715,55 +701,30 @@ function typewrite(el, delay, speed=38){
   });
 }
 
-// SIDE PANELS - stagger fade then typewriter
 setTimeout(()=>{
-  // Left panel fades in first
   gsap.to('#hs',{opacity:1,x:0,duration:.7,ease:'power3.out'});
-
-  // Lines stagger fade in sequence then typewrite
   const leftLines=[
-    {el:'tw1',delay:100},
-    {el:'tw2',delay:600},
-    {el:'sep1',delay:1000,sep:true},
-    {el:'tw3',delay:1200},
-    {el:'tw4',delay:1700},
-    {el:'sep2',delay:2100,sep:true},
-    {el:'tw5',delay:2300},
-    {el:'tw6',delay:2800},
+    {el:'tw1',delay:100},{el:'tw2',delay:600},
+    {el:'sep1',delay:1000,sep:true},{el:'tw3',delay:1200},{el:'tw4',delay:1700},
+    {el:'sep2',delay:2100,sep:true},{el:'tw5',delay:2300},{el:'tw6',delay:2800},
   ];
-
   leftLines.forEach(({el,delay,sep})=>{
-    if(sep){
-      setTimeout(()=>{document.getElementById(el).style.opacity='1'},delay);
-    } else {
-      typewrite(document.getElementById(el),delay,42);
-    }
+    if(sep){setTimeout(()=>{document.getElementById(el).style.opacity='1'},delay);}
+    else{typewrite(document.getElementById(el),delay,42);}
   });
-
-  // Right panel fades in after left
   setTimeout(()=>{
     gsap.to('#hs2',{opacity:1,x:0,duration:.7,ease:'power3.out'});
     const rightLines=[
-      {el:'tw7',delay:0},
-      {el:'tw8',delay:500},
-      {el:'tw9',delay:900},
-      {el:'sep3',delay:1200,sep:true},
-      {el:'tw10',delay:1400},
-      {el:'tw11',delay:1900},
-      {el:'tw12',delay:2300},
+      {el:'tw7',delay:0},{el:'tw8',delay:500},{el:'tw9',delay:900},
+      {el:'sep3',delay:1200,sep:true},{el:'tw10',delay:1400},{el:'tw11',delay:1900},{el:'tw12',delay:2300},
     ];
     rightLines.forEach(({el,delay,sep})=>{
-      if(sep){
-        setTimeout(()=>{document.getElementById(el).style.opacity='1'},delay);
-      } else {
-        typewrite(document.getElementById(el),delay,42);
-      }
+      if(sep){setTimeout(()=>{document.getElementById(el).style.opacity='1'},delay);}
+      else{typewrite(document.getElementById(el),delay,42);}
     });
   },1200);
-
 },1800);
 
-// S FLYER
 const sFlyer=document.getElementById('sFlyer');
 const bubble=document.getElementById('openMeBubble');
 let flyTl;
@@ -785,20 +746,17 @@ function startSFlyer(){
 }
 setTimeout(startSFlyer,3000);
 
-// CARDS
 ['#wc1','#wc2','#wc3'].forEach((id,i)=>{
   gsap.to(id,{scrollTrigger:{trigger:id,start:'top 88%'},opacity:1,y:0,duration:.8,delay:i*.12,ease:'power3.out'});
 });
 gsap.to('#ps',{scrollTrigger:{trigger:'#ps',start:'top 90%'},opacity:1,y:0,duration:.8,ease:'power3.out'});
 
-// PARALLAX
 document.addEventListener('mousemove',e=>{
   const x=(e.clientX/window.innerWidth-.5)*16;
   const y=(e.clientY/window.innerHeight-.5)*16;
   gsap.to('.hero-mesh',{x,y,duration:2.5,ease:'power1.out'});
 });
 
-// MODAL
 function openModal(){
   const btn=document.getElementById('envBtn');
   gsap.to(btn,{scale:0,opacity:0,duration:.3,ease:'back.in(2)',onComplete:()=>{
@@ -831,13 +789,11 @@ document.getElementById('footerWaitlist').addEventListener('click',scrollAndOpen
 function handleSub(){
   const v=document.getElementById('einp').value.trim();
   if(!v||!v.includes('@')){gsap.to('.minp',{keyframes:{x:[-10,10,-8,8,-4,4,0]},duration:.4});return}
-
   fetch('/.netlify/functions/subscribe',{
     method:'POST',
     headers:{'content-type':'application/json'},
     body:JSON.stringify({email:v})
   }).catch(()=>{});
-
   document.getElementById('fstate').style.display='none';
   document.getElementById('sstate').style.display='flex';
   boom();
@@ -854,7 +810,7 @@ function boom(){
     gsap.to(el,{y:(Math.random()-.1)*-600,x:(Math.random()-.5)*500,rotation:Math.random()*720,opacity:[0,1,1,1,1,0],duration:1.6+Math.random(),ease:'power2.out',delay:Math.random()*.2,onComplete:()=>el.remove()});
   }
 }
-// CONTACT MODAL
+
 function openContact(e){
   if(e)e.preventDefault();
   document.getElementById('contactModal').classList.add('open');
@@ -865,12 +821,8 @@ function closeContact(){
   setTimeout(()=>{
     document.getElementById('cform').style.display='block';
     document.getElementById('csuccess').style.display='none';
-    document.getElementById('cfname').value='';
-    document.getElementById('clname').value='';
-    document.getElementById('cemail').value='';
-    document.getElementById('cphone').value='';
+    ['cfname','clname','cemail','cphone','cmessage'].forEach(id=>document.getElementById(id).value='');
     document.getElementById('ccategory').value='';
-    document.getElementById('cmessage').value='';
   },450);
 }
 
@@ -902,7 +854,6 @@ function sendContact(){
     setTimeout(()=>btn.textContent='Send Message →',2000);
   });
 }
-
 </script>
 </body>
 </html>
